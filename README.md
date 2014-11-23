@@ -81,5 +81,27 @@ bash-4.3$ tree
 |   `-- tidy.txt
 `-- run_analysis.R
 ```
+##### R session info
 
+``` R
+> sessionInfo()
+R version 3.0.3 (2014-03-06)
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+locale:
+ [1] LC_CTYPE=en_US       LC_NUMERIC=C         LC_TIME=en_US       
+ [4] LC_COLLATE=C         LC_MONETARY=en_US    LC_MESSAGES=en_US   
+ [7] LC_PAPER=en_US       LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=en_US LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] knitr_1.7 dplyr_0.2
+
+loaded via a namespace (and not attached):
+[1] Rcpp_0.11.3    assertthat_0.1 compiler_3.0.3 evaluate_0.5.5 formatR_1.0   
+[6] magrittr_1.0.1 parallel_3.0.3 stringr_0.6.2  tools_3.0.3
+```
 
