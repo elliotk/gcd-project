@@ -1,0 +1,21 @@
+CodeBook
+===========
+
+File to explain project feature (or, variable) names and data processing steps
+
+```Shell
+Author: Elliot Kleiman
+File..: CodeBook.Rmd
+Desc..: File to explain work involved in cleaning up feature names
+Date..: Sat Nov 22 20:54:55 EST 2014
+```
+
+```{r loadFeatureData, echo = FALSE}
+load(file = "./data/mean.std.features.rda")
+load(file = "./data/mean.features.clean.rda")
+load(file = "./data/std.features.clean.rda")
+```
+
+```{r displayFeatureData, echo = FALSE}
+as.data.frame(mean.std.features)
+```
