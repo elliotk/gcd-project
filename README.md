@@ -9,6 +9,11 @@ File..: README.md
 Date..: Sun Nov 23 12:53:12 EST 2014
 Desc..: This file explains the project files and their layout
 ```
+##### Purpose:
+
+The purpose of this project is to clean data to produce a tidy data set.
+The course project data comes from the [Human Activity Recognition Using 
+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) dataset provided by the Center for Machine Learning and Intelligent Systems at UC Irvine.
 
 ##### Usage:
 
@@ -31,6 +36,10 @@ source(run_analysis.R)
 
 The output of running `run_analysis.R` is file `tidy.txt`, which is the tidy data set sought for the project.
 File `tidy.txt` is located in `data/tidy.txt`.
+
+##### Files:
+
+
 
 ##### File layout:
 
