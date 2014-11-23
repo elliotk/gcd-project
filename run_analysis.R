@@ -4,7 +4,9 @@
 # File..: run_analysis.R
 # Desc..: File to analyze course project data
 # Date..: Sat Nov 22 20:54:55 EST 2014
-# Usage.: $ Rscript run_analysis.R
+# Usage.: $ Rscript run_analysis.R # execute from a Unix or Linux shell, or
+#         source(run_analysis.R)   # execute from R console 
+
 
 ## 0. Download data ---------------------------
 
