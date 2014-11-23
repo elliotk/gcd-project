@@ -83,6 +83,8 @@ features.file <- file.path(dataset.directory, "features.txt")
 
 # Read features file to get variable names
 features <- read.table(features.file, stringsAsFactors = FALSE)
+# Save object for use in CodeBook.rmd
+save(features, file = file.path(data.directory,"features.rda"))
 
 # Get mean indices
 mean.features <- grep("mean\\(\\)", features$V2, value = FALSE)
