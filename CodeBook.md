@@ -12,6 +12,23 @@ Date..: Sat Nov 22 20:54:55 EST 2014
 
 
 
+##### Feature abbreviation key:
+```Shell
+t       = Time
+f       = Frequency, obtained by Fast Fourier Transform
+X       = X dimensional axis
+Y       = Y dimensional axis
+Z       = Z dimensional axis
+Acc     = Acceleration
+Mag     = Magnitude
+std     = Standard deviation
+Body    = Human body of subject
+Gyro    = Gyroscope
+Jerk    = Jerk signal of linear body acceleration signal and angular velocity
+mean    = Mean value
+Gravity = Gravity acceleration
+```
+
 
 ```
 ##            mean.std.features
