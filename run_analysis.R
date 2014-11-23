@@ -1,6 +1,6 @@
 # Elliot Kleiman
 # run_analysis.R
-# Wed Nov 19 17:45:32 EST 2014 
+# Sat Nov 22 20:54:55 EST 2014
 
 ## 0. Download data ---------------------------
 
@@ -28,7 +28,7 @@ download.file(file.url, destfile = data.file, method = "curl")
 date.downloaded <- date()
 
 # Extract zip archive file
-unzip(dataFile, exdir = dataDirectory) 
+unzip(data.file, exdir = data.directory) 
 
 ## 1. Merge data ---------------------------
 
@@ -70,7 +70,7 @@ test.merge <- cbind(test.data, test.subj, test.labs)
 # Merge training and test data
 training.test <- rbind(train.merge, test.merge)
 
-## 2. Extract mean and std measurements  ---------------------------
+## 2. Extract mean and std measurements ---------------------------
 
 # Set features file
 features.file <- file.path(dataset.directory, "features.txt")
@@ -98,7 +98,7 @@ activity.labels <- read.table(activity.labels.file, stringsAsFactors = FALSE)
 # Set activity column values to activity names from activity labels
 mean.std[, 68] <- factor(mean.std[, 68], labels = activity.labels$V2)
 
-## 4. Label data with descriptive variable names  ---------------------------
+## 4. Label data with descriptive variable names ---------------------------
 
 # Mean feature names:
 # Remove parenthesis
@@ -112,13 +112,19 @@ std.features.clean <- sub('\\(\\)', '', features$V2[std.features], perl = TRUE)
 # Replace - with .
 std.features.clean <- gsub('-', '.', std.features.clean)
 
+# Assign descriptive feature names to data frame
+colnames(mean.std) <- c(mean.features.clean, std.features.clean, "subject", "activity")
 
-                            
-#aggdata <- aggregate(reduced.set, by = list(Activity = reduced.set$V1.2, Subject = reduced.set$V1.1), FUN = mean, na.rm = TRUE)
-#summary(subset(aggdata, select = -c(V1.1, V1.2))) # or, summary(aggdata[-c(69, 70)])
+## 5. Create tidy data set ---------------------------
 
-aggdata.2 <- reduced.set %>%
-               group_by(V1.2, V1.1) %>%
-               summarise_each(funs(mean))
+# Load dplyr package
+require(dplyr)
 
-write.table(aggdata.2, row.names = FALSE, file = "./data/dplyr.result.txt")
+# Group by activity and subject
+# For each activity-subject combination, compute mean for each variable
+tidy <- mean.std %>%
+            group_by(activity, subject) %>%
+            summarise_each(funs(mean))
+
+# Write tidy data to file
+write.table(tidy, row.names = FALSE, file = "./data/tidy.txt")
