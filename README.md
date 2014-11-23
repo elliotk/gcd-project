@@ -39,7 +39,31 @@ File `tidy.txt` is located in `data/tidy.txt`.
 
 ##### Files:
 
+To produce a tidy data set for this project assignment, the following files were created:
+- CodeBook.Rmd - A convenience script to render listing of variables in tidy data set in markdown format
+- CodeBook.md - Textual description of variable (or, feature) names in tidy data set file `tidy.txt`
+- README.md - Overview description of project and files involved in producing tidy data
+- run_analysis.R - R script to produce tidy data
+- tidy.txt - Tidy data set
+- mean.features.clean.rda - Binary format of character vector of descriptive mean feature names, used in `CodeBook.Rmd`
+- std.features.clean.rda - Binary format of character vector of descriptive std feature names, used in `CodeBook.Rmd`
+- mean.std.features.rda - Binary format of character vector of both descriptive mean and std feature names, used in `CodeBook.Rmd`
+- dataset.zip - Course project data set file downloaded from [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
+From the unzipped course project data set file, the following files were manipulated: 
+- `data/UCI\ HAR\ Dataset/activity_labels.txt` - File containing activity names, used to name activity name values as text
+- `data/UCI\ HAR\ Dataset/features.txt` - File containing raw feature (or, variable) names. Edited these to produce more descriptive names for tidy data set file `tidy.txt`
+- test data
+  - `data/UCI\ HAR\ Dataset/test/X_test.txt` - Numeric measurements of features from test data
+  - `data/UCI\ HAR\ Dataset/test/subject_test.txt` - Subject values from test data
+  - `data/UCI\ HAR\ Dataset/test/y_test.txt` - Activity values from test data
+  -  Merged files `X_test.txt`, `subject_test.txt`, `y_test.txt` into one test data set
+- training data
+  - `data/UCI\ HAR\ Dataset/train/X_train.txt` - Numeric measurements of features from train data
+  - `data/UCI\ HAR\ Dataset/train/subject_train.txt` - Subject values from train data
+  - `data/UCI\ HAR\ Dataset/train/y_train.txt` - Activity values from train data
+  - Merged files `X_train.txt`, `subject_train.txt`, `y_train.txt` into one training data set
+- Merged training and test data sets into one data set
 
 ##### File layout:
 
