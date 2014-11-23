@@ -86,9 +86,13 @@ features <- read.table(features.file, stringsAsFactors = FALSE)
 
 # Get mean indices
 mean.features <- grep("mean\\(\\)", features$V2, value = FALSE)
+# Save object for use in CodeBook.rmd
+save(mean.features, file = file.path(data.directory,"mean.features.rda"))
 
 # Get std indices
 std.features <- grep("std\\(\\)", features$V2, value = FALSE)
+# Save object for use in CodeBook.rmd
+save(std.features, file = file.path(data.directory, "std.features.rda"))
 
 # Extract columns for mean and std, and subject and activity
 mean.std <- training.test[, c(mean.features, std.features, 562, 563)]
@@ -120,6 +124,9 @@ std.features.clean <- gsub('-', '.', std.features.clean)
 
 # Assign descriptive feature names to data frame
 colnames(mean.std) <- c(mean.features.clean, std.features.clean, "subject", "activity")
+# Save object for use in CodeBook.rmd
+mean.std.features <- colnames(mean.std)
+save(mean.std.features, file = file.path(data.directory, "mean.std.features.rda"))
 
 ## 5. Create tidy data set ---------------------------
 
