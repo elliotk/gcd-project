@@ -24,14 +24,14 @@ Mag     = Magnitude
 std     = Standard deviation
 Body    = Human body of subject
 Gyro    = Gyroscope
-Jerk    = Jerk signal of linear body acceleration signal and angular velocity
+Jerk    = Jerk signal
 mean    = Mean value
 Gravity = Gravity acceleration
 ```
 
 
 ```
-##            mean.std.features
+##                 feature.name
 ## 1            tBodyAcc.mean.X
 ## 2            tBodyAcc.mean.Y
 ## 3            tBodyAcc.mean.Z
@@ -100,4 +100,73 @@ Gravity = Gravity acceleration
 ## 66  fBodyBodyGyroJerkMag.std
 ## 67                   subject
 ## 68                  activity
+##                                                               feature.description
+## 1                             mean of body linear acceleration measured on X-axis
+## 2                             mean of body linear acceleration measured on Y-axis
+## 3                             mean of body linear acceleration measured on Z-axis
+## 4                                 mean of gravity acceleration measured on X-axis
+## 5                                 mean of gravity acceleration measured on Y-axis
+## 6                                 mean of gravity acceleration measured on Z-axis
+## 7            mean of body linear acceleration with jerk signal measured on X-axis
+## 8            mean of body linear acceleration with jerk signal measured on Y-axis
+## 9            mean of body linear acceleration with jerk signal measured on Z-axis
+## 10                                      mean of body gyroscope measured on X-axis
+## 11                                      mean of body gyroscope measured on Y-axis
+## 12                                      mean of body gyroscope measured on Z-axis
+## 13                     mean of body gyroscope with jerk signal measured on X-axis
+## 14                     mean of body gyroscope with jerk signal measured on Y-axis
+## 15                     mean of body gyroscope with jerk signal measured on Z-axis
+## 16                                     mean of body linear acceleration magnitude
+## 17                                         mean of gravity acceleration magnitude
+## 18                           mean of body linear acceleration with jerk magnitude
+## 19                                               mean of body gyroscope magnitude
+## 20                              mean of body gyroscope with jerk signal magnitude
+## 21                  mean of frequency body linear acceleration measured on X-axis
+## 22                  mean of frequency body linear acceleration measured on Y-axis
+## 23                  mean of frequency body linear acceleration measured on Z-axis
+## 24 mean of frequency body linear acceleration with jerk signal measured on X-axis
+## 25 mean of frequency body linear acceleration with jerk signal measured on Y-axis
+## 26 mean of frequency body linear acceleration with jerk signal measured on Z-axis
+## 27                            mean of frequency body gyroscope measured on X-axis
+## 28                            mean of frequency body gyroscope measured on Y-axis
+## 29                            mean of frequency body gyroscope measured on Z-axis
+## 30                           mean of frequency body linear acceleration magnitude
+## 31          mean of frequency body linear acceleration with jerk signal magnitude
+## 32                                     mean of frequency body gyroscope magnitude
+## 33                    mean of frequency body gyroscope with jerk signal magnitude
+## 34                             std of body linear acceleration measured on X-axis
+## 35                             std of body linear acceleration measured on Y-axis
+## 36                             std of body linear acceleration measured on Z-axis
+## 37                                 std of gravity acceleration measured on X-axis
+## 38                                 std of gravity acceleration measured on Y-axis
+## 39                                 std of gravity acceleration measured on Z-axis
+## 40            std of body linear acceleration with jerk signal measured on X-axis
+## 41            std of body linear acceleration with jerk signal measured on Y-axis
+## 42            std of body linear acceleration with jerk signal measured on Z-axis
+## 43                                       std of body gyroscope measured on X-axis
+## 44                                       std of body gyroscope measured on Y-axis
+## 45                                       std of body gyroscope measured on Z-axis
+## 46                      std of body gyroscope with jerk signal measured on X-axis
+## 47                      std of body gyroscope with jerk signal measured on Y-axis
+## 48                      std of body gyroscope with jerk signal measured on Z-axis
+## 49                                      std of body linear acceleration magnitude
+## 50                                          std of gravity acceleration magnitude
+## 51                            std of body linear acceleration with jerk magnitude
+## 52                                                std of body gyroscope magnitude
+## 53                               std of body gyroscope with jerk signal magnitude
+## 54                   std of frequency body linear acceleration measured on X-axis
+## 55                   std of frequency body linear acceleration measured on Y-axis
+## 56                   std of frequency body linear acceleration measured on Z-axis
+## 57  std of frequency body linear acceleration with jerk signal measured on X-axis
+## 58  std of frequency body linear acceleration with jerk signal measured on Y-axis
+## 59  std of frequency body linear acceleration with jerk signal measured on Z-axis
+## 60                             std of frequency body gyroscope measured on X-axis
+## 61                             std of frequency body gyroscope measured on Y-axis
+## 62                             std of frequency body gyroscope measured on Z-axis
+## 63                            std of frequency body linear acceleration magnitude
+## 64           std of frequency body linear acceleration with jerk signal magnitude
+## 65                                      std of frequency body gyroscope magnitude
+## 66                     std of frequency body gyroscope with jerk signal magnitude
+## 67                                                                        subject
+## 68                                                                       activity
 ```

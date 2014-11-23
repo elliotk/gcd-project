@@ -28,12 +28,82 @@ Mag     = Magnitude
 std     = Standard deviation
 Body    = Human body of subject
 Gyro    = Gyroscope
-Jerk    = Jerk signal of linear body acceleration signal and angular velocity
+Jerk    = Jerk signal
 mean    = Mean value
 Gravity = Gravity acceleration
 ```
 
 ```{r displayFeatureData, echo = FALSE}
-desc <- c("Mean of body linear acceleration measured on X-axis")
-as.data.frame(mean.std.features)
+description <- c(
+"mean of body linear acceleration measured on X-axis",
+"mean of body linear acceleration measured on Y-axis",
+"mean of body linear acceleration measured on Z-axis",
+"mean of gravity acceleration measured on X-axis",
+"mean of gravity acceleration measured on Y-axis",
+"mean of gravity acceleration measured on Z-axis",
+"mean of body linear acceleration with jerk signal measured on X-axis",
+"mean of body linear acceleration with jerk signal measured on Y-axis",
+"mean of body linear acceleration with jerk signal measured on Z-axis",
+"mean of body gyroscope measured on X-axis",
+"mean of body gyroscope measured on Y-axis",
+"mean of body gyroscope measured on Z-axis",
+"mean of body gyroscope with jerk signal measured on X-axis",
+"mean of body gyroscope with jerk signal measured on Y-axis",
+"mean of body gyroscope with jerk signal measured on Z-axis",
+"mean of body linear acceleration magnitude",
+"mean of gravity acceleration magnitude",
+"mean of body linear acceleration with jerk magnitude",
+"mean of body gyroscope magnitude",
+"mean of body gyroscope with jerk signal magnitude",
+"mean of frequency body linear acceleration measured on X-axis",
+"mean of frequency body linear acceleration measured on Y-axis",
+"mean of frequency body linear acceleration measured on Z-axis",
+"mean of frequency body linear acceleration with jerk signal measured on X-axis",
+"mean of frequency body linear acceleration with jerk signal measured on Y-axis",
+"mean of frequency body linear acceleration with jerk signal measured on Z-axis",
+"mean of frequency body gyroscope measured on X-axis",
+"mean of frequency body gyroscope measured on Y-axis",
+"mean of frequency body gyroscope measured on Z-axis",
+"mean of frequency body linear acceleration magnitude",
+"mean of frequency body linear acceleration with jerk signal magnitude",
+"mean of frequency body gyroscope magnitude",
+"mean of frequency body gyroscope with jerk signal magnitude",
+"std of body linear acceleration measured on X-axis",
+"std of body linear acceleration measured on Y-axis",
+"std of body linear acceleration measured on Z-axis",
+"std of gravity acceleration measured on X-axis",
+"std of gravity acceleration measured on Y-axis",
+"std of gravity acceleration measured on Z-axis",
+"std of body linear acceleration with jerk signal measured on X-axis",
+"std of body linear acceleration with jerk signal measured on Y-axis",
+"std of body linear acceleration with jerk signal measured on Z-axis",
+"std of body gyroscope measured on X-axis",
+"std of body gyroscope measured on Y-axis",
+"std of body gyroscope measured on Z-axis",
+"std of body gyroscope with jerk signal measured on X-axis",
+"std of body gyroscope with jerk signal measured on Y-axis",
+"std of body gyroscope with jerk signal measured on Z-axis",
+"std of body linear acceleration magnitude",
+"std of gravity acceleration magnitude",
+"std of body linear acceleration with jerk magnitude",
+"std of body gyroscope magnitude",
+"std of body gyroscope with jerk signal magnitude",
+"std of frequency body linear acceleration measured on X-axis",
+"std of frequency body linear acceleration measured on Y-axis",
+"std of frequency body linear acceleration measured on Z-axis",
+"std of frequency body linear acceleration with jerk signal measured on X-axis",
+"std of frequency body linear acceleration with jerk signal measured on Y-axis",
+"std of frequency body linear acceleration with jerk signal measured on Z-axis",
+"std of frequency body gyroscope measured on X-axis",
+"std of frequency body gyroscope measured on Y-axis",
+"std of frequency body gyroscope measured on Z-axis",
+"std of frequency body linear acceleration magnitude",
+"std of frequency body linear acceleration with jerk signal magnitude",
+"std of frequency body gyroscope magnitude",
+"std of frequency body gyroscope with jerk signal magnitude",
+"subject",
+"activity")
+
+# Write feature names and their descriptions
+data.frame(feature.name = mean.std.features, feature.description = description)
 ```
