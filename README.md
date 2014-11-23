@@ -14,7 +14,7 @@ Desc..: This file explains the project files and their layout
 
 To run the analysis and generate tidy data, do one of the following:
 
-i. Execute from a Unix or Linux shell
+Execute from a Unix or Linux shell
 ``` Shell
 $ Rscript run_analysis.R
 ```
@@ -23,7 +23,7 @@ All commands starting with a '$' sign need to be executed from a Unix or Linux s
 
 -or-
 
-ii. Execute from R console
+Execute from R console
 ``` R
 source(run_analysis.R)
 ```
