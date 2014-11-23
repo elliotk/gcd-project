@@ -111,7 +111,9 @@ mean.std[, 68] <- factor(mean.std[, 68], labels = activity.labels$V2)
 mean.features.clean <- sub('\\(\\)', '', features$V2[mean.features], perl = TRUE)
 # Replace - with .
 mean.features.clean <- gsub('-', '.', mean.features.clean)
-# Save object for use in CodeBook.rmd
+# Remove duplicate feature names
+mean.features.clean <- sub("BodyBody", "Body", mean.features.clean)
+# Save object for use in CodeBook.Rmd
 save(mean.features.clean, file = file.path(data.directory, "mean.features.clean.rda"))
 
 # Std feature names:
@@ -119,12 +121,14 @@ save(mean.features.clean, file = file.path(data.directory, "mean.features.clean.
 std.features.clean <- sub('\\(\\)', '', features$V2[std.features], perl = TRUE)
 # Replace - with .
 std.features.clean <- gsub('-', '.', std.features.clean)
-# Save object for use in CodeBook.rmd
+# Remove duplicate feature names
+std.features.clean <- sub("BodyBody", "Body", std.features.clean)
+# Save object for use in CodeBook.Rmd
 save(std.features.clean, file = file.path(data.directory, "std.features.clean.rda"))
 
 # Assign descriptive feature names to data frame
 colnames(mean.std) <- c(mean.features.clean, std.features.clean, "subject", "activity")
-# Save object for use in CodeBook.rmd
+# Save object for use in CodeBook.Rmd
 mean.std.features <- colnames(mean.std)
 save(mean.std.features, file = file.path(data.directory, "mean.std.features.rda"))
 

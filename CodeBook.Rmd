@@ -33,6 +33,8 @@ mean    = Mean value
 Gravity = Gravity acceleration
 ```
 
+##### Feature names and their descriptions:
+
 ```{r displayFeatureData, echo = FALSE}
 description <- c(
 "mean of body linear acceleration measured on X-axis",
@@ -107,3 +109,6 @@ description <- c(
 # Write feature names and their descriptions
 data.frame(feature.name = mean.std.features, feature.description = description)
 ```
+
+##### Feature (or, variable) name transformations
+
