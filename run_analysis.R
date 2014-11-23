@@ -1,6 +1,10 @@
-# Elliot Kleiman
-# run_analysis.R
-# Sat Nov 22 20:54:55 EST 2014
+#!/usr/bin/env Rscript
+
+# Author: Elliot Kleiman
+# File..: run_analysis.R
+# Desc..: File to analyze course project data
+# Date..: Sat Nov 22 20:54:55 EST 2014
+# Usage.: $ Rscript run_analysis.R
 
 ## 0. Download data ---------------------------
 
