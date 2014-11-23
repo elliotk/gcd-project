@@ -6,7 +6,7 @@ Getting and Cleaning Data Course Project Assignment
 ``` text
 Author: Elliot Kleiman
 File..: README.md
-Date..: Sun Nov 23 12:53:12 EST 2014
+Date..: Sun Nov 23 12:53:12 2014
 Desc..: This file explains the project files and their layout
 ```
 ##### Purpose:
@@ -116,7 +116,7 @@ bash-4.3$ tree
 |   `-- tidy.txt
 `-- run_analysis.R
 ```
-##### R session info
+##### R session info:
 
 ``` R
 > sessionInfo()
