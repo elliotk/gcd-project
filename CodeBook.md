@@ -6,7 +6,7 @@ File to explain project feature (or, variable) names and data processing steps
 ```Shell
 Author: Elliot Kleiman
 File..: CodeBook.Rmd
-Desc..: File to explain work involved in cleaning up feature names
+Desc..: File to explain work involved in cleaning up feature names reducing data dimensionality
 Date..: Sat Nov 22 20:54:55 EST 2014
 ```
 
@@ -28,6 +28,32 @@ Jerk    = Jerk signal
 mean    = Mean value
 Gravity = Gravity acceleration
 ```
+
+##### Data transformations
+
+The data set was reduced in dimensionality from
+measuring 561 features over 10299 observations to 
+measuring 66 features over 180 aggregated observations.
+
+The final tidy data set consists of 66 features grouped 
+first by activity then by subject. For each feature, the 
+mean was computed over each activity-subject combination.
+
+##### Feature (or, variable) name transformation and selection
+
+The feature names were transformed (or, cleaned) as follows:
+
+All parenthesis `()`, and `-`, characters in the feature names were
+removed by whitespace and the `.` character respectively. Duplicate
+feature names, such as `BodyBody` were deduplicated to `Body` to display
+only a single value.
+
+Feature names were selected based on grepping for the substring `mean()` or `std()`.
+All other feature names were omitted. This reduced the dimensionality of the
+features under study from 561 to 66.
+
+For a listing of all transformed and selected feature names as they appear 
+in file `tidy.txt` see following section `Feature names and their descriptions`.
 
 ##### Feature names and their descriptions:
 
@@ -172,6 +198,3 @@ Gravity = Gravity acceleration
 ## 67                                                                        subject
 ## 68                                                                       activity
 ```
-
-##### Feature (or, variable) name transformations
-
