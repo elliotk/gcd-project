@@ -12,23 +12,6 @@ Date..: Sat Nov 22 20:54:55 EST 2014
 
 
 
-##### Feature abbreviation key:
-```Shell
-t       = Time
-f       = Frequency, obtained by Fast Fourier Transform
-X       = X dimensional axis
-Y       = Y dimensional axis
-Z       = Z dimensional axis
-Acc     = Acceleration
-Mag     = Magnitude
-std     = Standard deviation
-Body    = Human body of subject
-Gyro    = Gyroscope
-Jerk    = Jerk signal
-mean    = Mean value
-Gravity = Gravity acceleration
-```
-
 ##### Data transformations
 
 The data set was reduced in dimensionality from
@@ -51,6 +34,24 @@ only a single value.
 Feature names were selected based on grepping for the substring `mean()` or `std()`.
 All other feature names were omitted. This reduced the dimensionality of the
 features under study from 561 to 66.
+
+##### Feature abbreviation key:
+
+```Shell
+t       = Time
+f       = Frequency, obtained by Fast Fourier Transform
+X       = X dimensional axis
+Y       = Y dimensional axis
+Z       = Z dimensional axis
+Acc     = Acceleration
+Mag     = Magnitude
+std     = Standard deviation
+Body    = Human body of subject
+Gyro    = Gyroscope
+Jerk    = Jerk signal
+mean    = Mean value
+Gravity = Gravity acceleration
+```
 
 For a listing of all transformed and selected feature names as they appear 
 in file `tidy.txt` see following section `Feature names and their descriptions`.
