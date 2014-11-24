@@ -27,7 +27,7 @@ mean was computed over each activity-subject combination.
 The feature names were transformed (or, cleaned) as follows:
 
 All parenthesis `()`, and `-`, characters in the feature names were
-removed by whitespace and the `.` character respectively. Duplicate
+replaced by whitespace and the `.` character respectively. Duplicate
 feature names, such as `BodyBody` were deduplicated to `Body` to display
 only a single value.
 
